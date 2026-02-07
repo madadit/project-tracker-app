@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Project Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Project Tracker</h1>
+        <p class="lead">Master your projects • Track every task • Achieve your goals</p>
+      </header>
+
+      <section class="panel actions-row">
+        <div>
+          <button id="add-project-btn">Add Project</button>
+          <button id="add-task-btn" class="muted">Add Task</button>
+        </div>
+        <div class="muted">Select a project to manage its tasks</div>
+      </section>
+
+      <main class="grid">
+        <aside class="panel" id="projects-panel">
+          <h2>Projects</h2>
+          <div id="projects-list" class="list"></div>
+        </aside>
+
+        <section class="panel" id="tasks-panel">
+          <h2 id="tasks-title">Tasks</h2>
+          <div id="tasks-info" class="muted">No project selected</div>
+          <div id="tasks-list" class="list"></div>
+        </section>
+      </main>
+
+      <footer>
+        <div>Built with <span style="color: #ef4444;">♥</span> by <strong>Ahmad Aditiya</strong></div>
+        <div style="margin-top: 8px; opacity: 0.7;">A modern project tracker for managing tasks effortlessly</div>
+      </footer>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div class="modal" id="confirm-modal" aria-hidden="true">
+      <div class="modal-content">
+        <h3 id="confirm-title">Confirm</h3>
+        <p id="confirm-message"></p>
+        <div class="row actions">
+          <button id="confirm-yes" class="btn-danger">Yes, Delete</button>
+          <button id="confirm-no" class="muted">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Modal -->
+    <div class="modal" id="project-modal" aria-hidden="true">
+      <div class="modal-content">
+        <h3 id="project-modal-title">Add Project</h3>
+        <form id="project-form">
+          <input type="hidden" id="project-id" />
+          <div class="row">
+            <label for="project-name">Name</label>
+            <input id="project-name" required maxlength="120" />
+          </div>
+          <div class="row">
+            <label for="project-desc">Description</label>
+            <textarea id="project-desc" rows="3"></textarea>
+          </div>
+          <div class="row actions">
+            <button type="submit" id="project-save">Save</button>
+            <button type="button" id="project-cancel" class="muted">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Task Modal -->
+    <div class="modal" id="task-modal" aria-hidden="true">
+      <div class="modal-content">
+        <h3 id="task-modal-title">Add Task</h3>
+        <form id="task-form">
+          <input type="hidden" id="task-id" />
+          <div class="row">
+            <label for="task-name">Name</label>
+            <input id="task-name" required maxlength="140" />
+          </div>
+          <div class="row">
+            <label for="task-status">Status</label>
+            <select id="task-status">
+              <option value="draft">Draft</option>
+              <option value="inprogress">In Progress</option>
+              <option value="done">Done</option>
+            </select>
+          </div>
+          <div class="row">
+            <label for="task-project">Project</label>
+            <select id="task-project"></select>
+          </div>
+          <div class="row">
+            <label for="task-weight">Weight</label>
+            <input id="task-weight" type="number" min="1" value="1" />
+          </div>
+          <div class="row actions">
+            <button type="submit" id="task-save">Save</button>
+            <button type="button" id="task-cancel" class="muted">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="app.js" defer></script>
+  </body>
+</html>
