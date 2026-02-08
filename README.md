@@ -189,4 +189,4 @@ Progress = (Total Bobot Tugas Selesai / Total Bobot Semua Tugas) × 100%
 - Hapus browser cache/localStorage akan menghapus semua data
 - Gunakan tombol "Hapus" dengan hati-hati karena aksi tidak bisa di-undo
 
-Dikembangkan dengan ♥ oleh [Ahmad Aditiya]
+dibuat dengan ♥ oleh [Ahmad Aditiya]
