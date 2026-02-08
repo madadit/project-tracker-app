@@ -53,7 +53,7 @@ Aplikasi Project Tracker modern untuk mengelola proyek dan tugas dengan fitur-fi
 - Saat Backend API status berubah jadi In Progress, Mobile App otomatis menjadi Draft
 
 ### 3. Task Hierarchy (Subtasks)
-- Task dapat memiliki parent task dan mehrere child tasks
+- Task dapat memiliki parent task dan child tasks
 - **Hierarchical Status**: Status ditentukan oleh task itu sendiri dan semua subtask-nya
   - All Done = semua parent dan subtask selesai
   - In Progress = ada subtask atau parent yang sedang dikerjakan
@@ -81,7 +81,7 @@ Aplikasi Project Tracker modern untuk mengelola proyek dan tugas dengan fitur-fi
 
 **Contoh Use Case:**
 - Project A: 2024-01-01 to 2024-02-28
-- Project B: 2024-02-15 to 2024-03-31 ❌ (Overlap dengan A)
+- Project B: 2024-02-15 to 2024-03-31 (Overlap dengan A)
 - Sistem akan reject dengan pesan: "Schedule conflict with project 'A' (2024-01-01 - 2024-02-28)"
 
 ## 🎯 Cara Menggunakan
