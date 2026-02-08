@@ -66,6 +66,26 @@
             <label for="project-desc">Description</label>
             <textarea id="project-desc" rows="3"></textarea>
           </div>
+          <div class="row">
+            <label for="project-start-date">Start Date</label>
+            <input id="project-start-date" type="date" />
+          </div>
+          <div class="row">
+            <label for="project-end-date">End Date</label>
+            <input id="project-end-date" type="date" />
+          </div>
+          <div class="row">
+            <label for="project-dependencies">Dependencies</label>
+            <select id="project-dependencies" multiple style="height: 100px;"></select>
+          </div>
+          <div class="row" style="display: none;">
+            <label for="project-status">Status</label>
+            <select id="project-status">
+              <option value="draft">Draft</option>
+              <option value="inprogress">In Progress</option>
+              <option value="done">Done</option>
+            </select>
+          </div>
           <div class="row actions">
             <button type="submit" id="project-save">Save</button>
             <button type="button" id="project-cancel" class="muted">Cancel</button>
@@ -99,6 +119,14 @@
           <div class="row">
             <label for="task-weight">Weight</label>
             <input id="task-weight" type="number" min="1" value="1" />
+          </div>
+          <div class="row">
+            <label for="task-parent">Parent Task</label>
+            <select id="task-parent"></select>
+          </div>
+          <div class="row">
+            <label for="task-dependencies">Dependencies</label>
+            <select id="task-dependencies" multiple style="height: 100px;"></select>
           </div>
           <div class="row actions">
             <button type="submit" id="task-save">Save</button>
